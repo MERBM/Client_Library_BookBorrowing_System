@@ -8,6 +8,7 @@ import { MaterialModule } from './modules/material/material.module';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SidebarComponent, FooterComponent],
@@ -15,7 +16,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    MaterialModule,   
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

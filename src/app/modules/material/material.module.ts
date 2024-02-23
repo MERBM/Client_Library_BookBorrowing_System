@@ -11,6 +11,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { BookComponent } from '../../shared/components/book/book.component';
+import { BookRecordComponent } from '../../shared/components/book-record/book-record.component';
+import { MaterialRoutingModule } from './material-routing.module';
+import { MatTableModule } from '@angular/material/table';
+
 
 const materialComponent = [
   MatButtonModule,
@@ -22,12 +27,15 @@ const materialComponent = [
   MatSidenavModule,
   MatMenuModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,MatTableModule
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [materialComponent],
-  exports: [materialComponent],
+  declarations: [
+    BookComponent,
+    BookRecordComponent
+  ],
+  imports: [CommonModule,materialComponent, MaterialRoutingModule],
+  exports: [CommonModule,materialComponent],
 })
 export class MaterialModule {}
